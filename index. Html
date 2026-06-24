@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>لعبة الثعبان</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1a1a2e">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Snake">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a2e;
+      color: #eee;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      touch-action: none;
+    }
+    h1 { font-size: 1.6rem; color: #00ff88; margin-bottom: 8px; letter-spacing: 2px; }
+    #score-board { display: flex; gap: 24px; margin-bottom: 12px; font-size: 0.95rem; color: #aaa; }
+    #score-board span { color: #00ff88; font-weight: bold; }
+    canvas { border: 2px solid #00ff8844; border-radius: 8px; background: #0d0d1a; display: block; }
+    #message { margin-top: 16px; font-size: 1.1rem; color: #ff4466; min-height: 28px; text-align: center; }
+    #controls { display: grid; grid-template-columns: repeat(3, 56px); grid-template-rows: repeat(2, 56px); gap: 6px; margin-top: 20px; }
+    .btn { background: #ffffff11; border: 1px solid #00ff8833; border-radius: 10px; color: #00ff88; font-size: 1.4rem; cursor: pointer; display: flex; align-items: center; justify-content: center; user-select: none; -webkit-tap-highlight-color: transparent; transition: background 0.1s; }
+    .btn:active { background: #00ff8822; }
+    #btn-up    { grid-column: 2; grid-row: 1; }
+    #btn-left  { grid-column: 1; grid-row: 2; }
+    #btn-down  { grid-column: 2; grid-row: 2; }
+    #btn-right { grid-column: 3; grid-row: 2; }
+    #btn-start { margin-top: 14px; padding: 10px 32px; background: #00ff8822; border: 1px solid #00ff88; border-radius: 24px; color: #00ff88; font-size: 1rem; cursor: pointer; letter-spacing: 1px; }
+    #btn-start:active { background: #00ff8844; }
+  </style>
+</head>
+<body>
+  <h1>🐍 لعبة الثعبان</h1>
+  <div
